@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Email Sender</title>
+</head>
+<body>
+    <h1>Send an Email</h1>
+    <form id="emailForm">
+        <label for="to">To:</label>
+        <input type="email" id="to" name="to" required><br><br>
+        <label for="subject">Subject:</label>
+        <input type="text" id="subject" name="subject" required><br><br>
+        <label for="text">Message:</label>
+        <textarea id="text" name="text" required></textarea><br><br>
+        <button type="submit">Send Email</button>
+    </form>
+
+    <div id="progress"></div>
+
+    <script>
+        const form = document.getElementById('emailForm');
+        const progress = document.getElementById('progress');
+
+        form.addEventListener('submit', async (e) => {
+            e.preventDefault();
+            progress.textContent = 'Sending...';
+
+            const to = form.to.value;
+            const subject = form.subject.value;
+            const text = form.text.value;
+
+            try {
+                const response = await fetch(`/send-email?to=${encodeURIComponent(to)}&subject=${encodeURIComponent(subject)}&text=${encodeURIComponent(text)}`);
+                const result = await response.text();
+
+                if (response.ok) {
+                    progress.textContent = 'Email sent successfully!';
+                } else {
+                    progress.textContent = `Error: ${result}`;
+                }
+            } catch (error) {
+                progress.textContent = `Error: ${error.message}`;
+            }
+        });
+    </script>
+</body>
+</html>
