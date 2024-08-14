@@ -21,3 +21,9 @@ Change `.env.sample` to `.env`
 `Nodemailer` For sending emails.
 
 `Dotenv` For managing environment variables.
+
+# `Member`
+
+|Status|GitHub|GitLab|Email|
+|-|-|-|-|
+|owner|[JetsadaWijit](https://github.com/JetsadaWijit)|[JetsadaWijit](https://gitlab.com/JetsadaWijit)|jetsadawijit@outlook.com|
