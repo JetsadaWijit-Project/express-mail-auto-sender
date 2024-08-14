@@ -2,9 +2,7 @@
 
 This project is designed to automatically send emails to other email addresses as a simple example.
 
-This project may not have high security.
-
-
+`Note` This project may not have high security.
 
 # `Enviroment`
 
