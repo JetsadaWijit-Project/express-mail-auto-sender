@@ -26,4 +26,4 @@ Change `.env.sample` to `.env`
 
 |Status|GitHub|GitLab|Email|
 |-|-|-|-|
-|owner|[JetsadaWijit](https://github.com/JetsadaWijit)|[JetsadaWijit](https://gitlab.com/JetsadaWijit)|jetsadawijit@outlook.com|
+|owner|[`JetsadaWijit`](https://github.com/JetsadaWijit)|[`JetsadaWijit`](https://gitlab.com/JetsadaWijit)|jetsadawijit@outlook.com|
